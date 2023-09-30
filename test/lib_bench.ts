@@ -5,7 +5,6 @@ const largeTestFile = await Deno.readTextFile("./test/large_crawl.log");
 const smallUrls = parseCrawlLog(smallTestFile, [200, 301]);
 const largeUrls = parseCrawlLog(largeTestFile, [200, 301]);
 
-
 Deno.bench(function parseSmallCrawlLog() {
   parseCrawlLog(smallTestFile, [200, 301]);
 });

@@ -1,8 +1,10 @@
 {
   "tasks": {
     "dev": "deno run --allow-net --allow-read --watch src/server.ts",
-    "test": "deno test --allow-net --allow-read",
+    "test": "deno test --allow-net --allow-read --coverage=cov",
+    "test:coverage": "deno test --allow-net --allow-read --coverage=cov && deno coverage cov_profile",
     "test:watch": "deno test --allow-net --allow-read --watch",
+    "coverage": "deno coverage cov_profile",
     "bench": "deno bench --allow-net --allow-read",
     "run:cli": "deno run --allow-net --allow-read --allow-write src/cli.ts",
     "run:server": "deno run --allow-net --allow-read --watch src/server.ts",

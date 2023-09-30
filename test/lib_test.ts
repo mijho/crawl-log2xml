@@ -22,6 +22,17 @@ Deno.test("test valid convert request", async () => {
   assertEquals(await res.text(), expectedOutput);
 });
 
+Deno.test("test valid convert request no routes found", async () => {
+  const res = await app.request("/convert?status=301", {
+    method: "POST",
+    body: testFile,
+  });
+
+  assertEquals(res.status, 200);
+  assertEquals(res.headers.get("Content-Type"), "text/plain;charset=UTF-8");
+  assertEquals(await res.text(), "No urls found");
+});
+
 Deno.test("test invalid convert request", async () => {
   const res = await app.request("/convert", {
     method: "POST",

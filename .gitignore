@@ -2,3 +2,6 @@
 .vscode
 sitemap.xml
 dist/crawl-log2xml*
+cov_profile
+cov
+*.lcov

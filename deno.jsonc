@@ -1,0 +1,12 @@
+{
+  "tasks": {
+    "dev": "deno run --allow-net --allow-read --watch src/server.ts",
+    "test": "deno test --allow-net --allow-read",
+    "test:watch": "deno test --allow-net --allow-read --watch",
+    "bench": "deno bench --allow-net --allow-read test/lib_bench.ts",
+    "run:cli": "deno run --allow-net --allow-read --allow-write src/cli.ts",
+    "run:server": "deno run --allow-net --allow-read --watch src/server.ts",
+    "build:cli": "deno compile --allow-net --allow-read --allow-write --output ./dist/crawl-log2xml-ctl src/cli.ts",
+    "build:server": "deno compile --allow-net --allow-read --output ./dist/crawl-log2xml-server src/server.ts"
+  }
+}

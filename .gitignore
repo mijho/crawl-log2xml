@@ -1,0 +1,4 @@
+.env
+.vscode
+sitemap.xml
+dist/crawl-log2xml*

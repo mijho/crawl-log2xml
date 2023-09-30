@@ -6,7 +6,7 @@
     "bench": "deno bench --allow-net --allow-read",
     "run:cli": "deno run --allow-net --allow-read --allow-write src/cli.ts",
     "run:server": "deno run --allow-net --allow-read --watch src/server.ts",
-    "build:cli": "deno compile --allow-net --allow-read --allow-write --output ./dist/crawl-log2xml-ctl src/cli.ts",
-    "build:server": "deno compile --allow-net --allow-read --output ./dist/crawl-log2xml-server src/server.ts"
+    "build:cli": "deno compile --allow-net --allow-read --allow-write --output ./dist/crawl-log2xml-ctl src/cli.ts && shasum -a 256 ./dist/crawl-log2xml-ctl | tee ./dist/crawl-log2xml-ctl.sha256",
+    "build:server": "deno compile --allow-net --allow-read --output ./dist/crawl-log2xml-server src/server.ts && shasum -a 256 ./dist/crawl-log2xml-server | tee ./dist/crawl-log2xml-server.sha256"
   }
 }
